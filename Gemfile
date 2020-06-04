@@ -7,4 +7,4 @@ gem 'rest-client'
 gem 'json'
 
 # Specify your gem's dependencies in lyrics-cli.gemspec
-gemspec
+
