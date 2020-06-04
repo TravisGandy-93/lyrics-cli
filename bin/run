@@ -1,0 +1,5 @@
+#!/usr/bin/ruby ruby
+
+require_relative '../lib/lyrics_cli.rb'
+
+#Cli.new.run
