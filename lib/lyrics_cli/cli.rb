@@ -1,7 +1,7 @@
 class Cli 
   
   
-  
+  puts "cli class"
   
   
   
