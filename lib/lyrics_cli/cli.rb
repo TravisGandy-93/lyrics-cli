@@ -3,16 +3,21 @@ class Cli
   
   def run 
       hello
-      Api.get_lyrics
+      puts "Enter artist name:"
+      artist = gets.chomp
+      puts "Enter song name:"
+      title = gets.chomp
+      Api.get_lyrics(artist, title)
       
   end 
   
   def hello
-      puts "Hello and welcome to your lyric search Cli."
+      puts "welcome to your lyric search Cli."
   end 
   
-
-  
+  def get_user_input
+      
+  end 
   
   
 end 

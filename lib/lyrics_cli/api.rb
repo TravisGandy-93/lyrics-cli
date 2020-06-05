@@ -1,11 +1,11 @@
 class Api 
-  BASE_URL = "https://api.lyrics.ovh/v1"
+ 
+   BASE_URL = "https://api.lyrics.ovh/v1/"
   
-  
-  def self.get_lyrics
-    res = RestClient.get(BASE_URL + "/drake" + "/losses")
+  def self.get_lyrics(artist, title)
+    res = RestClient.get(BASE_URL + "#{artist}" + "/" + "#{title}")
     data = JSON.parse(res.body)
-    data["lyrics"].split("\n\n")
+    puts data["lyrics"].split("\n\n")
   end 
   
 end 
