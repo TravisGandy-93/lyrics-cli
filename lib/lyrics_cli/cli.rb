@@ -3,11 +3,8 @@ class Cli
   
   def run 
       hello
-      puts "Enter artist name:"
-      artist = gets.chomp
-      puts "Enter song name:"
-      title = gets.chomp
-      Api.get_lyrics(artist, title)
+      get_user_input
+      
       
   end 
   
@@ -16,8 +13,16 @@ class Cli
   end 
   
   def get_user_input
-      
+      puts "Enter artist name:"
+      artist = gets.chomp
+      a = URI.encode(artist)
+      puts "Enter song name:"
+      title = gets.chomp
+      t = URI.encode(title)
+      Api.get_lyrics(a, t)
   end 
+  
+  
   
   
 end 
