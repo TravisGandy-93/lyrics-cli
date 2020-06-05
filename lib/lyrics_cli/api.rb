@@ -4,7 +4,7 @@ class Api
   def self.get_lyrics
     res = RestClient.get(BASE_URL + "/drake" + "/losses")
     data = JSON.parse(res.body)
-    data
+    data["lyrics"].split("\n\n")
   end 
   
 end 
