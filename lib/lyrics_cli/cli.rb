@@ -4,7 +4,7 @@ class Cli
   def run 
       hello
       get_user_input
-      
+      is_that_it
       
   end 
   
@@ -22,7 +22,12 @@ class Cli
       Api.get_lyrics(a, t)
   end 
   
-  
-  
+  def is_that_it
+      puts "Would you like to search for a different set of lyrics?(yes/no)"
+      answer = gets.chomp
+      if answer == "yes"
+          get_user_input
+      end 
+  end 
   
 end 
