@@ -30,4 +30,12 @@ class Cli
             end 
   end 
   
+  def list_lyric_titles
+    
+  end 
+  
+  def list_lyric_artists
+    
+  end 
+  
 end 

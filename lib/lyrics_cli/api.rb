@@ -5,6 +5,7 @@ class Api
   def self.get_lyrics(artist, title)
     res = RestClient.get(BASE_URL + "#{artist}" + "/" + "#{title}")
     data = JSON.parse(res.body)
+    Lyrics.new(artist, title)
     puts data["lyrics"].split("\n\n")
   end 
   
