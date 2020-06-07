@@ -17,11 +17,11 @@ class Lyrics
   end 
   
   def self.list_artists
-      @@artists
+      puts @@artists
   end 
   
   def self.list_titles
-      @@titles
+      puts @@titles
   end 
   
 end 

@@ -18,7 +18,7 @@ class Cli
       puts "Enter song name:"
       title = gets.chomp
       t = URI.encode(title)
-      Lyrics.new(artist, title)
+      Lyrics.new(title, artist)
       Api.get_lyrics(a, t)
       is_that_it
   end 
@@ -37,7 +37,10 @@ class Cli
   end 
   
   def want_a_list
-      puts "Would you like a list of the artists or song names you have searched?(artists/songs)"
+      puts "Would you like a list of the artists or song names you have searched?(yes/no)" 
+      yes_or_no = gets.chomp 
+    if yes_or_no == "yes"
+        puts "artists or songs?"
       answer = gets.chomp 
         case answer
         when "artists"
@@ -47,6 +50,9 @@ class Cli
         else
           puts "Sorry wrong answer."
       end 
+    else
+      puts "thanks for stopping by friend. See you next time"
+    end 
   end 
   
   def list_lyric_titles
