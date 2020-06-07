@@ -22,7 +22,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: 
+When prompted to do so, enter the name of the artist and the name of the song that you would like to find.
+After your lyrics are displayed you will be asked if you would like to do an another search.
+If you choose not to do another search you will be asked if you would like to get a list of the artist or song names that you have searched up to that point.
+If you choose artist you will receive a list of all artist that you have search and if you choose songs you will get a list of the song names that you have searched.
+After you have get the list of your choice the Cli will say its goodbyes to you and end.
 
 ## Development
 
