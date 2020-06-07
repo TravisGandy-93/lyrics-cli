@@ -3,6 +3,7 @@ class Cli
   
   def run 
       hello
+      sleep 1 
       get_user_input
       goodbye
   end 
@@ -40,7 +41,7 @@ class Cli
       puts Rainbow("Would you like a list of the artists or song names you have searched?(yes/no)").red
       yes_or_no = gets.chomp 
     if yes_or_no == "yes"
-        puts "artists or songs?"
+        puts Rainbow("artists or songs?").red
       answer = gets.chomp 
         case answer
         when "artists"
@@ -54,7 +55,9 @@ class Cli
   end 
   
   def goodbye
-      puts Rainbow("Thanks for stopping by friend. Hope you found everything you need for now. See you next time.").red.italic.bold
+      puts Rainbow("Thanks for stopping by friend. Hope you found everything you need for now. 
+      
+      See you next time.").red.italic.bold
   end 
   
   def list_lyric_titles
