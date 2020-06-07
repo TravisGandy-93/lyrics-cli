@@ -4,7 +4,7 @@ class Cli
   def run 
       hello
       get_user_input
-      
+      goodbye
   end 
   
   def hello
@@ -32,7 +32,7 @@ class Cli
           when "no"
               want_a_list
           else
-            puts "sorry that wont work."
+            puts "Sorry that wont work."
           end 
   end 
   
@@ -51,8 +51,12 @@ class Cli
           puts "Sorry wrong answer."
       end 
     else
-      puts "thanks for stopping by friend. See you next time"
+      goodbye
     end 
+  end 
+  
+  def goodbye
+      puts "Thanks for stopping by friend. Hope you found everything you need for now. See you next time."
   end 
   
   def list_lyric_titles
