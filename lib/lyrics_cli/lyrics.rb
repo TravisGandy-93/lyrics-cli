@@ -8,8 +8,8 @@ class Lyrics
     @title = title
     @artist = artist
     @@all << self 
-    @@artists << @artist
-    @@titles << @title
+    @@artists << artist
+    @@titles << title
   end 
   
   def self.all 
