@@ -8,7 +8,7 @@ class Cli
   end 
   
   def hello
-      puts "welcome to your lyric search Cli."
+      puts Rainbow("Welcome to your lyric search Cli.").red.bold
   end 
   
   def get_user_input
@@ -24,7 +24,7 @@ class Cli
   end 
   
   def is_that_it
-      puts "Would you like to search for a different set of lyrics?(yes/no)"
+      puts Rainbow("Would you like to search for a different set of lyrics?(yes/no)").red
       answer = gets.chomp
           case answer
           when "yes"
@@ -37,7 +37,7 @@ class Cli
   end 
   
   def want_a_list
-      puts "Would you like a list of the artists or song names you have searched?(yes/no)" 
+      puts Rainbow("Would you like a list of the artists or song names you have searched?(yes/no)").red
       yes_or_no = gets.chomp 
     if yes_or_no == "yes"
         puts "artists or songs?"
@@ -49,14 +49,12 @@ class Cli
           list_lyric_titles
         else
           puts "Sorry wrong answer."
-      end 
-    else
-      goodbye
+        end 
     end 
   end 
   
   def goodbye
-      puts "Thanks for stopping by friend. Hope you found everything you need for now. See you next time."
+      puts Rainbow("Thanks for stopping by friend. Hope you found everything you need for now. See you next time.").red.italic.bold
   end 
   
   def list_lyric_titles
