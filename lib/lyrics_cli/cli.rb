@@ -20,6 +20,8 @@ class Cli
       title = gets.chomp
       t = URI.encode(title)
       Lyrics.new(title, artist)
+      puts Rainbow("---------------------").red.bold
+      sleep 1
       Api.get_lyrics(a, t)
       is_that_it
   end 
@@ -43,6 +45,7 @@ class Cli
     if yes_or_no == "yes"
         puts Rainbow("artists or songs?").red
       answer = gets.chomp 
+       puts Rainbow("---------------------").red.bold
         case answer
         when "artists"
           list_lyric_artists
