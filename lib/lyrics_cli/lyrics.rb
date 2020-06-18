@@ -8,8 +8,6 @@ class Lyrics
     @title = title
     @artist = artist
     @@all << self 
-    @@artists << artist
-    @@titles << title
   end 
   
   def self.all 
@@ -17,11 +15,11 @@ class Lyrics
   end 
   
   def self.list_artists
-      puts @@artists
+      @@all.each{|lyric| puts lyric.artist}
   end 
   
   def self.list_titles
-      puts @@titles
+      @@all.each{|lyric| puts lyric.title}
   end 
   
 end 
